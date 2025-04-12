@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorText">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/blackBackButton"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:src="@drawable/ic_left_arrow"
+
+        app:backgroundTint="@color/white"
+        app:tint="@color/black"
+        app:fabSize="normal"
+        android:scaleType="center"
+        app:fabCustomSize="@dimen/_36sdp"
+        android:layout_marginTop="@dimen/_34sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="start|top"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="rtsp://192.168.213.210:5540/ch0"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ubuntu_medium"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        />
+
+    <SurfaceView
+        android:id="@+id/svVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/pipButton"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:src="@drawable/ic_picture_in_picture"
+
+        app:backgroundTint="@color/white"
+        app:tint="@color/colorAccent"
+        app:fabSize="normal"
+        android:scaleType="center"
+        app:fabCustomSize="@dimen/_36sdp"
+        android:layout_marginBottom="@dimen/_34sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="bottom|end"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/recordButton"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:src="@drawable/ic_record_24"
+        app:backgroundTint="@color/white"
+        app:tint="@color/colorRed"
+        app:fabSize="normal"
+        android:scaleType="centerInside"
+        app:fabCustomSize="@dimen/_36sdp"
+        android:layout_marginBottom="@dimen/_84sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="bottom|end"
+        />
+</FrameLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Vyorius Stream</string>
+    <string name="choose_protocol">Choose Protocol</string>
+    <string name="stream">STREAM</string>
+    <string name="app">App</string>
+    <string name="video">Video</string>
+    <string name="vyorius">Vyorius</string>
+    <string name="connecting">Connecting</string>
+
+    <string name="stop_recording_notification_message">Drag down to stop the recording</string>
+    <string name="stop_recording_notification_title">Recording your screen</string>
+</resources>
