@@ -22,17 +22,17 @@ android {
     }
     splits {
         abi {
-            isEnable = true            // Note the 'isEnable' assignment for Kotlin DSL
+            isEnable = true
             reset()
             include("arm64-v8a")
-            isUniversalApk = false     // 'isUniversalApk' to disable universal APK creation
+            isUniversalApk = false
         }
     }
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = true           // Enables code minification via R8/ProGuard.
-            isShrinkResources = true         // Removes unused resources to further slim down the APK.
+            isMinifyEnabled = true
+            isShrinkResources = true       
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

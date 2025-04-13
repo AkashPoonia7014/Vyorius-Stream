@@ -119,24 +119,4 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-    public void testRtspStream(Context context, String rtspUrl) {
-        MediaPlayer mediaPlayer = new MediaPlayer();
-        try {
-            mediaPlayer.setDataSource(rtspUrl);
-            mediaPlayer.setOnPreparedListener(mp -> {
-                Toast.makeText(context, "RTSP stream is reachable", Toast.LENGTH_SHORT).show();
-                mp.release();
-            });
-            mediaPlayer.setOnErrorListener((mp, what, extra) -> {
-                Toast.makeText(context, "Invalid or unreachable RTSP stream", Toast.LENGTH_SHORT).show();
-                return true;
-            });
-            mediaPlayer.prepareAsync();
-        } catch (IOException e) {
-            e.printStackTrace();
-            Toast.makeText(context, "Malformed RTSP URL", Toast.LENGTH_SHORT).show();
-        }
-    }
-
 }
